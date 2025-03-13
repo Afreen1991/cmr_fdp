@@ -4,7 +4,7 @@ from groq import Groq
 def ask_question(api_key, question):
     """Ask a question to the Groq API."""
     client = Groq(api_key=api_key)
-    system_prompt = """consider you are the best doctor in world help this question."""
+    system_prompt = """consider you are explaining it to 5 year old kid"""
     response = client.chat.completions.create(
         messages=[
             {"role": "system", "content": system_prompt},
@@ -16,7 +16,7 @@ def ask_question(api_key, question):
     print("\nResponse:", response.choices[0].message.content)
 
 def main():
-    api_key = "your_api"
+    api_key = "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"
     question = input("Enter your question: ")
     ask_question(api_key, question)
 
