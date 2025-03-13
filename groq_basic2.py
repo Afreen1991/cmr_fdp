@@ -4,7 +4,7 @@ from groq import Groq
 def ask_question(api_key):
     """Ask a straightforward question to the Groq API."""
     client = Groq(api_key=api_key)
-    question = "What are the top 3 most interesting scientific discoveries of the last decade?"
+    question = "What is the importance of AI in real world"
     response = client.chat.completions.create(
         messages=[{"role": "user", "content": question}],
         model="mixtral-8x7b-32768"
